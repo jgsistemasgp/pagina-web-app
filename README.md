@@ -35,23 +35,83 @@ http://localhost:3000
 
 ## Producción y despliegue
 
-Opciones rápidas:
+### Render (recomendado para esta app)
 
-- Ejecutar localmente (producción):
+Este proyecto funciona muy bien directamente en Render porque es una app Node.js con Express.
+
+1. Crea un nuevo Web Service en Render.
+2. Conecta el repositorio GitHub.
+3. Usa estos valores:
+
+```text
+Build Command: npm install
+Start Command: node server.js
+```
+
+4. La app incluye `GET /health` para health checks.
+
+Ejemplo de configuración para añadir en el repositorio:
+
+```yaml
+services:
+  - type: web
+    name: jgsistemas-web
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: node server.js
+    healthCheckPath: /health
+    envVars:
+      - key: NODE_ENV
+        value: production
+```
+
+### Vercel
+
+Vercel puede servir esta app, pero necesita una adaptación a Node serverless o un wrapper compatible. Con la estructura actual, la opción más simple es seguir con Render.
+
+Ejemplo conceptual:
+
+```json
+{
+  "version": 2,
+  "builds": [{ "src": "server.js", "use": "@vercel/node" }],
+  "routes": [{ "src": "/(.*)", "dest": "server.js" }]
+}
+```
+
+### Netlify
+
+Netlify es ideal para frontend estático; para una app Express hace falta convertir la API a funciones serverless o dejar el frontend estático y mover el backend a una API aparte.
+
+Ejemplo conceptual:
+
+```toml
+[build]
+  publish = "public"
+  command = "npm install"
+
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/:splat"
+  status = 200
+```
+
+### Ejecutar localmente (producción)
 
 ```powershell
 npm install
 npm start
 ```
 
-- Ejecutar en modo desarrollo (recarga automática):
+### Ejecutar en modo desarrollo
 
 ```powershell
 npm install
 npm run dev
 ```
 
-- Docker (construir y ejecutar):
+### Docker
 
 ```bash
 docker build -t pagina-web-app .
