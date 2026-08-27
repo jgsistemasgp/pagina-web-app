@@ -1,0 +1,3 @@
+- Scaffold a simple web app with HTML/CSS/JS frontend and a Node.js Express backend.
+- Ensure `README.md` is present with setup steps.
+- Do not add extra frameworks beyond the requested HTML frontend and Node backend.

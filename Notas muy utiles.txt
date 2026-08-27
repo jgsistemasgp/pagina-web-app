@@ -1,0 +1,8 @@
+# instalar dependencias
+npm install
+
+# arrancar servidor (en primer plano)
+npm start
+
+# o arrancar directamente
+node server.js

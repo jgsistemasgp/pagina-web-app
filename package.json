@@ -1,0 +1,12 @@
+{
+  "name": "pagina-web-app",
+  "version": "1.0.0",
+  "description": "Aplicación web con frontend HTML/CSS/JS y backend Node.js Express.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
