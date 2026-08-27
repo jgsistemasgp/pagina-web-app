@@ -3,35 +3,226 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mi Aplicación Web</title>
+  <title>JGsistemas | Tecnología que impulsa tu negocio</title>
+  <meta name="description" content="JGsistemas ofrece soluciones integrales en datacenter, networking, seguridad, microinformática y consultoría para empresas que quieren crecer." />
+  <meta property="og:title" content="JGsistemas | Tecnología que impulsa tu negocio" />
+  <meta property="og:description" content="Infraestructura, seguridad y soluciones digitales para negocios y empresas." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header class="hero">
-    <div class="container">
-      <h1>Mi Aplicación Web</h1>
-      <p>Una aplicación web sencilla con frontend en HTML/CSS/JS y backend en Node.js.</p>
-      <button id="loadMessage">Obtener mensaje del backend</button>
-      <p id="message" class="message"></p>
+  <header class="topbar">
+    <div class="container nav-wrap">
+      <div class="brand" aria-label="JGsistemas logo">
+        <div class="brand-mark" aria-hidden="true">
+          <span class="brand-j">J</span><span class="brand-g">G</span>
+        </div>
+        <div class="brand-copy" aria-label="JGsistemas">
+          <span class="brand-name">Sistemas</span>
+        </div>
+      </div>
+      <nav class="nav" aria-label="Navegación principal">
+        <a href="#soluciones">Soluciones</a>
+        <a href="#ventajas">Ventajas</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+      <a class="nav-cta" href="#contacto">Solicitar consultoría</a>
     </div>
   </header>
 
-  <main class="container">
-    <section>
-      <h2>Sobre esta aplicación</h2>
-      <p>Esta aplicación sirve como punto de partida para construir un proyecto web completo con frontend y backend.</p>
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Tecnología que impulsa tu negocio</p>
+          <h1>Infraestructura sólida, seguridad inteligente y crecimiento digital real.</h1>
+          <p class="lead">JGsistemas ayuda a empresas a modernizar su infraestructura, proteger sus datos y operar con más eficiencia mediante soluciones en datacenter, networking, seguridad, microinformática y consultoría estratégica.</p>
+          <div class="hero-actions">
+            <a class="primary-btn" href="#contacto">Solicitar información</a>
+            <a class="secondary-btn" href="#soluciones">Ver soluciones</a>
+          </div>
+          <div class="hero-metrics" aria-label="Estadísticas de servicio">
+            <div>
+              <strong>24/7</strong>
+              <span>soporte</span>
+            </div>
+            <div>
+              <strong>+100</strong>
+              <span>equipos</span>
+            </div>
+            <div>
+              <strong>100%</strong>
+              <span>enfoque empresarial</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-panel" aria-label="Resumen de especialidades">
+          <div class="panel-card">
+            <span class="panel-label">Especialidades</span>
+            <ul>
+              <li>Datacenter</li>
+              <li>Networking y seguridad</li>
+              <li>Microinformática</li>
+              <li>Consultoría tecnológica</li>
+            </ul>
+            <div class="panel-foot">
+              <span>Diseño</span>
+              <span>Implementación</span>
+              <span>Soporte</span>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section>
-      <h2>Instrucciones</h2>
-      <ol>
-        <li>Instala las dependencias: <code>npm install</code></li>
-        <li>Inicia el servidor: <code>npm start</code></li>
-        <li>Abre <code>http://localhost:3000</code> en tu navegador</li>
-      </ol>
+    <section class="trust-bar">
+      <div class="container trust-grid">
+        <span>Infraestructura</span>
+        <span>Resiliencia</span>
+        <span>Seguridad</span>
+        <span>Conectividad</span>
+        <span>Consultoría</span>
+      </div>
+    </section>
+
+    <section class="services" id="soluciones">
+      <div class="container">
+        <div class="section-header">
+          <p class="eyebrow eyebrow-dark">Soluciones</p>
+          <h2>Un ecosistema tecnológico pensado para crecer con estabilidad.</h2>
+        </div>
+
+        <div class="cards">
+          <article class="card">
+            <div class="icon">01</div>
+            <h3>Datacenter</h3>
+            <p>Arquitectura, mantenimiento y optimización de entornos críticos para garantizar continuidad, rendimiento y seguridad operativa.</p>
+          </article>
+
+          <article class="card">
+            <div class="icon">02</div>
+            <h3>Networking</h3>
+            <p>Redes robustas y escalables para conectar personas, equipos y procesos con velocidad, estabilidad y control.</p>
+          </article>
+
+          <article class="card">
+            <div class="icon">03</div>
+            <h3>Seguridad</h3>
+            <p>Protección de infraestructura y datos con estrategias alineadas a las necesidades reales de cada organización.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="advantages" id="ventajas">
+      <div class="container advantages-grid">
+        <div class="advantages-copy">
+          <p class="eyebrow eyebrow-dark">Ventajas</p>
+          <h2>Confianza, criterio técnico y acompañamiento estratégico.</h2>
+          <p>En JGsistemas combinamos experiencia práctica con visión empresarial para resolver complejidades de infraestructura, seguridad y conectividad sin perder foco en el crecimiento del negocio.</p>
+        </div>
+
+        <div class="advantages-list">
+          <article>
+            <span class="number">01</span>
+            <div>
+              <h3>Diagnóstico real</h3>
+              <p>Analizamos la situación actual y diseñamos soluciones alineadas a tus objetivos.</p>
+            </div>
+          </article>
+          <article>
+            <span class="number">02</span>
+            <div>
+              <h3>Implementación segura</h3>
+              <p>Ejecutamos proyectos con criterio técnico, control y minimización de riesgos.</p>
+            </div>
+          </article>
+          <article>
+            <span class="number">03</span>
+            <div>
+              <h3>Soporte continuo</h3>
+              <p>Te acompañamos para mantener la infraestructura estable y siempre preparada para escalar.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="about">
+      <div class="container about-grid">
+        <div>
+          <p class="eyebrow eyebrow-dark">Quiénes somos</p>
+          <h2>JGsistemas</h2>
+        </div>
+        <div>
+          <p>Somos un equipo especializado en tecnología que impulsa negocios, combinando soluciones de infraestructura, software y consultoría para ayudar a organizaciones a operar mejor, crecer con seguridad y adaptarse a los nuevos desafíos digitales.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contacto">
+      <div class="container contact-layout">
+        <div class="contact-copy">
+          <p class="eyebrow eyebrow-dark">Contacto</p>
+          <h2>Hablemos de tu próximo proyecto.</h2>
+          <p>Si necesitás fortalecer tu infraestructura, mejorar la seguridad o modernizar tus sistemas, te ayudamos a definir la mejor solución para tu empresa.</p>
+
+          <div class="contact-list">
+            <a href="mailto:ventas@jgsistemas.com.ar">ventas@jgsistemas.com.ar</a>
+            <a href="https://www.linkedin.com/company/jgsistemas" target="_blank" rel="noreferrer">LinkedIn: JGsistemas</a>
+          </div>
+        </div>
+
+        <form id="contactForm" class="contact-form" novalidate>
+          <div class="field-row">
+            <label>
+              <span>Nombre</span>
+              <input type="text" name="name" placeholder="Tu nombre" required />
+            </label>
+            <label>
+              <span>Empresa</span>
+              <input type="text" name="company" placeholder="Nombre de la empresa" />
+            </label>
+          </div>
+
+          <div class="field-row">
+            <label>
+              <span>Email</span>
+              <input type="email" name="email" placeholder="tu@email.com" required />
+            </label>
+            <label>
+              <span>Servicio</span>
+              <select name="service" required>
+                <option value="">Seleccioná una opción</option>
+                <option value="Datacenter">Datacenter</option>
+                <option value="Networking y Seguridad">Networking y Seguridad</option>
+                <option value="Microinformática">Microinformática</option>
+                <option value="Consultoría Tecnológica">Consultoría Tecnológica</option>
+              </select>
+            </label>
+          </div>
+
+          <label>
+            <span>Mensaje</span>
+            <textarea name="message" rows="5" placeholder="Contanos qué necesitás..." required></textarea>
+          </label>
+
+          <button type="submit" class="primary-btn form-btn">Enviar consulta</button>
+          <p id="formStatus" class="form-status" aria-live="polite"></p>
+        </form>
+      </div>
     </section>
   </main>
 
-  <script src="script.js"></script>
+  <footer class="site-footer">
+    <div class="container footer-wrap">
+      <p>© 2026 JGsistemas</p>
+      <p>Tecnología que impulsa tu negocio</p>
+    </div>
+  </footer>
+
+  <script src="/script.js"></script>
 </body>
 </html>

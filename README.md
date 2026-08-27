@@ -32,3 +32,36 @@ http://localhost:3000
 ## API de ejemplo
 
 - `GET /api/hello` devuelve un mensaje JSON.
+
+## Producción y despliegue
+
+Opciones rápidas:
+
+- Ejecutar localmente (producción):
+
+```powershell
+npm install
+npm start
+```
+
+- Ejecutar en modo desarrollo (recarga automática):
+
+```powershell
+npm install
+npm run dev
+```
+
+- Docker (construir y ejecutar):
+
+```bash
+docker build -t pagina-web-app .
+docker run -p 3000:3000 pagina-web-app
+```
+
+o con `docker-compose`:
+
+```bash
+docker-compose up --build
+```
+
+El servidor expone `GET /health` para comprobaciones de estado.
