@@ -24,20 +24,21 @@ if (form && status) {
       return;
     }
 
-    const payload = {
-      name,
-      company: String(formData.get('company') || '').trim(),
-      email,
-      service,
-      message,
-      sentAt: new Date().toISOString()
-    };
+    const company = String(formData.get('company') || '').trim();
+    const subject = encodeURIComponent(`Nueva consulta web: ${service}`);
+    const body = encodeURIComponent([
+      `Nombre: ${name}`,
+      `Empresa: ${company || 'No informada'}`,
+      `Email: ${email}`,
+      `Servicio: ${service}`,
+      '',
+      'Mensaje:',
+      message
+    ].join('\n'));
 
-    console.log('Formulario enviado:', payload);
-
-    status.textContent = 'Consulta enviada correctamente. Nos pondremos en contacto a la brevedad.';
+    window.location.href = `mailto:ventas@jgsistemas.com.ar?subject=${subject}&body=${body}`;
+    status.textContent = 'Se abrió tu correo con la consulta lista para enviar.';
     status.style.color = '#0d5bdc';
-    form.reset();
   });
 }
 
